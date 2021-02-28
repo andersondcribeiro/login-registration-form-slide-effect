@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ui - Tela de Login e Cadastro de Usuários Estilo Slide</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form login">
+      <h2 class="redgamers">GAMER4TK</h2>
+      <label>
+        <span>Email</span>
+       <input class="placeholder"type="email"  id="Email" name="email" id="input">
+      </label>
+      <label>
+        <span>Senha</span>
+       <input class="placeholder" type="password" id="password" name="password" id="input">
+      </label>
+      <button onclick="myFunction()" class="enviar" type="button">Entrar</button>
+      <p class="esqueceu-senha">Esqueci minha senha!</p>
+
+    </div>
+
+    <div class="slide-cadastro">
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>Novo por aqui?</h2>
+          <p>Crie uma conta para acessar as nossas novidades!</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>Já tem conta?</h2>
+          <p>Se você já possui uma conta é só fazer login para ter acesso as novidades!</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Novo</span>
+          <span class="m-in">Login</span>
+        </div>
+      </div>
+      <div class="form cadastro">
+        <h2>Criar nova conta</h2>
+        <label>
+          <span>Nome</span>
+          <input type="text" id="nome" class="placeholder">
+        </label>
+        <label>
+          <span>E-mail</span>
+          <input type="email" id="mailnovo" class="placeholder">
+        </label>
+        <label>
+          <span>Senha</span>
+          <input class="placeholder" type="password" id="passwordnovo">
+        </label>
+        <label>
+          <span>Confirmar a senha</span>
+          <input type="password" id="confpasswordnovo" class="placeholder">
+        </label>
+        <button onclick="myFunction()" type="button" class="enviar">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Possible issue on slide effect in some versions of safari without live reload support.-->
+<script type="text/javascript"> 
+   document.querySelector('.img-btn').addEventListener('click', function()
+	{
+		document.querySelector('.wrapper').classList.toggle('s-signup')
+	}
+
+);
+
+function myFunction() {
+    document.getElementById("Email").placeholder = "Campo obrigatório";
+    document.getElementById("nome").placeholder = "Campo obrigatório";
+    document.getElementById("password").placeholder = "Campo obrigatório";
+    document.getElementById("mailnovo").placeholder = "Campo obrigatório";
+    document.getElementById("passwordnovo").placeholder = "Campo obrigatório";
+    document.getElementById("confpasswordnovo").placeholder = "Campo obrigatório";
+  };
+
+</script>
+</body>
+</html>
+
+
